@@ -1,6 +1,11 @@
-const factorial = function() {
-
+const factorial = function(n) {
+    if(Number.isInteger(n) === false || n < 0){
+        return undefined;
+    }
+    if(n === 0) return 1;
+    return n * factorial(n-1);
 };
 
 // Do not edit below this line
 module.exports = factorial;
+
